@@ -1,0 +1,92 @@
+// MG Math (c) Matt Graves 2014
+// This provides some additions to the basic mathmatical functions.
+
+// Array arithmatic
+
+// a[] + b
+operator multiPlus<<<index>>>(Float32 a[], Float32 b, io Float32 c[]) {
+  c[index] = a[index] + b;
+}
+function Float32[] +(Float32 a[], Float32 b) {
+  Float32 c[];
+  c.resize(a.size);
+  // for (Integer i = 0; i < a.size; i++) {
+  //   c[i] = a[i] + b;
+  // }
+  multiPlus<<<a.size>>>(a,b,c);
+  return c;
+}
+function Float32[] +(Float32 b, Float32 a[]) {
+  Float32 c[];
+  c.resize(a.size);
+  multiPlus<<<a.size>>>(a,b,c);
+  return c;
+}
+
+// a[] - b
+operator multiMinus<<<index>>>(Float32 a[], Float32 b, io Float32 c[]) {
+  c[index] = a[index] - b;
+}
+function Float32[] -(Float32 a[], Float32 b) {
+  Float32 c[];
+  c.resize(a.size);
+  multiMinus<<<a.size>>>(a,b,c);
+  return c;
+}
+function Float32[] -(Float32 b, Float32 a[]) {
+  Float32 c[];
+  c.resize(a.size);
+  multiMinus<<<a.size>>>(a,b,c);
+  return c;
+}
+
+// a[] * b
+operator multiMultiply<<<index>>>(Float32 a[], Float32 b, io Float32 c[]) {
+  c[index] = a[index] * b;
+}
+function Float32[] *(Float32 a[], Float32 b) {
+  Float32 c[];
+  c.resize(a.size);
+  multiMultiply<<<a.size>>>(a,b,c);
+  return c;
+}
+function Float32[] *(Float32 b, Float32 a[]) {
+  Float32 c[];
+  c.resize(a.size);
+  multiMultiply<<<a.size>>>(a,b,c);
+  return c;
+}
+
+// a[] / b
+operator multiDivide<<<index>>>(Float32 a[], Float32 b, io Float32 c[]) {
+  c[index] = a[index] / b;
+}
+function Float32[] /(Float32 a[], Float32 b) {
+  Float32 c[];
+  c.resize(a.size);
+  multiDivide<<<a.size>>>(a,b,c);
+  return c;
+}
+function Float32[] /(Float32 b, Float32 a[]) {
+  Float32 c[];
+  c.resize(a.size);
+  multiDivide<<<a.size>>>(a,b,c);
+  return c;
+}
+
+// a[] % b
+operator multiMod<<<index>>>(Float32 a[], Float32 b, io Float32 c[]) {
+  c[index] = a[index] % b;
+}
+function Float32[] %(Float32 a[], Float32 b) {
+  Float32 c[];
+  c.resize(a.size);
+  multiMod<<<a.size>>>(a,b,c);
+  return c;
+}
+function Float32[] %(Float32 b, Float32 a[]) {
+  Float32 c[];
+  c.resize(a.size);
+  multiMod<<<a.size>>>(a,b,c);
+  return c;
+}
