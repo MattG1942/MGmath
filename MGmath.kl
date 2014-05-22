@@ -1,7 +1,22 @@
 // MG Math (c) Matt Graves 2014
 // This provides some additions to the basic mathmatical functions.
 
-// Array arithmatic
+// Array Arithmatic Operators
+// +, -, *, / or % a single value with an array to return an array of the same size as the origional array.
+// Each value in the array is concidered individually when applying the operation.
+// eg. [1,2,3] + 5 = [6,7,8] or 12 / [4,3,2] = [3,4,6]
+// types suported: (x is suported)
+// UInt8
+// SInt8
+// UInt16
+// SInt16
+// UInt32
+// SInt32
+// UInt64
+// SInt64
+// Float32 x
+// Float64
+// (Goal all numerical)
 
 // a[] + b
 operator multiPlus<<<index>>>(Float32 a[], Float32 b, io Float32 c[]) {
@@ -24,19 +39,23 @@ function Float32[] +(Float32 b, Float32 a[]) {
 }
 
 // a[] - b
-operator multiMinus<<<index>>>(Float32 a[], Float32 b, io Float32 c[]) {
+operator multiAMinusB<<<index>>>(Float32 a[], Float32 b, io Float32 c[]) {
   c[index] = a[index] - b;
 }
 function Float32[] -(Float32 a[], Float32 b) {
   Float32 c[];
   c.resize(a.size);
-  multiMinus<<<a.size>>>(a,b,c);
+  multiAMinusB<<<a.size>>>(a,b,c);
   return c;
+}
+// b - a[]
+operator multiBMinusA<<<index>>>(Float32 a[], Float32 b, io Float32 c[]) {
+  c[index] = b - a[index];
 }
 function Float32[] -(Float32 b, Float32 a[]) {
   Float32 c[];
   c.resize(a.size);
-  multiMinus<<<a.size>>>(a,b,c);
+  multiBMinusA<<<a.size>>>(a,b,c);
   return c;
 }
 
@@ -58,35 +77,43 @@ function Float32[] *(Float32 b, Float32 a[]) {
 }
 
 // a[] / b
-operator multiDivide<<<index>>>(Float32 a[], Float32 b, io Float32 c[]) {
+operator multiADivideB<<<index>>>(Float32 a[], Float32 b, io Float32 c[]) {
   c[index] = a[index] / b;
 }
 function Float32[] /(Float32 a[], Float32 b) {
   Float32 c[];
   c.resize(a.size);
-  multiDivide<<<a.size>>>(a,b,c);
+  multiADivideB<<<a.size>>>(a,b,c);
   return c;
+}
+// b / a[]
+operator multiBDivideA<<<index>>>(Float32 a[], Float32 b, io Float32 c[]) {
+  c[index] = b / a[index];
 }
 function Float32[] /(Float32 b, Float32 a[]) {
   Float32 c[];
   c.resize(a.size);
-  multiDivide<<<a.size>>>(a,b,c);
+  multiBDivideA<<<a.size>>>(a,b,c);
   return c;
 }
 
 // a[] % b
-operator multiMod<<<index>>>(Float32 a[], Float32 b, io Float32 c[]) {
+operator multiAModB<<<index>>>(Float32 a[], Float32 b, io Float32 c[]) {
   c[index] = a[index] % b;
 }
 function Float32[] %(Float32 a[], Float32 b) {
   Float32 c[];
   c.resize(a.size);
-  multiMod<<<a.size>>>(a,b,c);
+  multiAModB<<<a.size>>>(a,b,c);
   return c;
+}
+// b % a[]
+operator multiBModA<<<index>>>(Float32 a[], Float32 b, io Float32 c[]) {
+  c[index] = b % a[index];
 }
 function Float32[] %(Float32 b, Float32 a[]) {
   Float32 c[];
   c.resize(a.size);
-  multiMod<<<a.size>>>(a,b,c);
+  multiBModA<<<a.size>>>(a,b,c);
   return c;
 }
