@@ -1,0 +1,1016 @@
+// Array Arithmatic Operators
+// +, -, *, / or % a single value with an array to return an array of the same size as the origional array.
+// Each value in the array is concidered individually when applying the operation.
+// eg. [1,2,3] + 5 = [6,7,8] or 12 / [4,3,2] = [3,4,6]
+// All Numerical Base types suported
+
+// a[] + b | b + a[]
+
+// UInt8 a[] + UInt8 b | UInt8 b + UInt8 a[]
+operator multiPlusUInt8<<<index>>>(UInt8 a[], UInt8 b, io UInt8 c[]) {
+  c[index] = a[index] + b;
+}
+function UInt8[] +(UInt8 a[], UInt8 b) {
+  UInt8 c[];
+  c.resize(a.size);
+  // for (Integer i = 0; i < a.size; i++) {
+  //   c[i] = a[i] + b;
+  // }
+  multiPlusUInt8<<<a.size>>>(a,b,c);
+  return c;
+}
+function UInt8[] +(UInt8 b, UInt8 a[]) {
+  UInt8 c[];
+  c.resize(a.size);
+  multiPlusUInt8<<<a.size>>>(a,b,c);
+  return c;
+}
+
+// SInt8 a[] + SInt8 b | SInt8 b + SInt8 a[]
+operator multiPlusSInt8<<<index>>>(SInt8 a[], SInt8 b, io SInt8 c[]) {
+  c[index] = a[index] + b;
+}
+function SInt8[] +(SInt8 a[], SInt8 b) {
+  SInt8 c[];
+  c.resize(a.size);
+  // for (Integer i = 0; i < a.size; i++) {
+  //   c[i] = a[i] + b;
+  // }
+  multiPlusSInt8<<<a.size>>>(a,b,c);
+  return c;
+}
+function SInt8[] +(SInt8 b, SInt8 a[]) {
+  SInt8 c[];
+  c.resize(a.size);
+  multiPlusSInt8<<<a.size>>>(a,b,c);
+  return c;
+}
+
+// UInt16 a[] + UInt16 b | UInt16 b + UInt16 a[]
+operator multiPlusUInt16<<<index>>>(UInt16 a[], UInt16 b, io UInt16 c[]) {
+  c[index] = a[index] + b;
+}
+function UInt16[] +(UInt16 a[], UInt16 b) {
+  UInt16 c[];
+  c.resize(a.size);
+  // for (Integer i = 0; i < a.size; i++) {
+  //   c[i] = a[i] + b;
+  // }
+  multiPlusUInt16<<<a.size>>>(a,b,c);
+  return c;
+}
+function UInt16[] +(UInt16 b, UInt16 a[]) {
+  UInt16 c[];
+  c.resize(a.size);
+  multiPlusUInt16<<<a.size>>>(a,b,c);
+  return c;
+}
+
+// SInt16 a[] + SInt16 b | SInt16 b + SInt16 a[]
+operator multiPlusSInt16<<<index>>>(SInt16 a[], SInt16 b, io SInt16 c[]) {
+  c[index] = a[index] + b;
+}
+function SInt16[] +(SInt16 a[], SInt16 b) {
+  SInt16 c[];
+  c.resize(a.size);
+  // for (Integer i = 0; i < a.size; i++) {
+  //   c[i] = a[i] + b;
+  // }
+  multiPlusSInt16<<<a.size>>>(a,b,c);
+  return c;
+}
+function SInt16[] +(SInt16 b, SInt16 a[]) {
+  SInt16 c[];
+  c.resize(a.size);
+  multiPlusSInt16<<<a.size>>>(a,b,c);
+  return c;
+}
+
+// UInt32 a[] + UInt32 b | UInt32 b + UInt32 a[]
+operator multiPlusUInt32<<<index>>>(UInt32 a[], UInt32 b, io UInt32 c[]) {
+  c[index] = a[index] + b;
+}
+function UInt32[] +(UInt32 a[], UInt32 b) {
+  UInt32 c[];
+  c.resize(a.size);
+  // for (Integer i = 0; i < a.size; i++) {
+  //   c[i] = a[i] + b;
+  // }
+  multiPlusUInt32<<<a.size>>>(a,b,c);
+  return c;
+}
+function UInt32[] +(UInt32 b, UInt32 a[]) {
+  UInt32 c[];
+  c.resize(a.size);
+  multiPlusUInt32<<<a.size>>>(a,b,c);
+  return c;
+}
+
+// SInt32 a[] + SInt32 b | SInt32 b + SInt32 a[]
+operator multiPlusSInt32<<<index>>>(SInt32 a[], SInt32 b, io SInt32 c[]) {
+  c[index] = a[index] + b;
+}
+function SInt32[] +(SInt32 a[], SInt32 b) {
+  SInt32 c[];
+  c.resize(a.size);
+  // for (Integer i = 0; i < a.size; i++) {
+  //   c[i] = a[i] + b;
+  // }
+  multiPlusSInt32<<<a.size>>>(a,b,c);
+  return c;
+}
+function SInt32[] +(SInt32 b, SInt32 a[]) {
+  SInt32 c[];
+  c.resize(a.size);
+  multiPlusSInt32<<<a.size>>>(a,b,c);
+  return c;
+}
+
+// UInt64 a[] + UInt64 b | UInt64 b + UInt64 a[]
+operator multiPlusUInt64<<<index>>>(UInt64 a[], UInt64 b, io UInt64 c[]) {
+  c[index] = a[index] + b;
+}
+function UInt64[] +(UInt64 a[], UInt64 b) {
+  UInt64 c[];
+  c.resize(a.size);
+  // for (Integer i = 0; i < a.size; i++) {
+  //   c[i] = a[i] + b;
+  // }
+  multiPlusUInt64<<<a.size>>>(a,b,c);
+  return c;
+}
+function UInt64[] +(UInt64 b, UInt64 a[]) {
+  UInt64 c[];
+  c.resize(a.size);
+  multiPlusUInt64<<<a.size>>>(a,b,c);
+  return c;
+}
+
+// SInt64 a[] + SInt64 b | SInt64 b + SInt64 a[]
+operator multiPlusSInt64<<<index>>>(SInt64 a[], SInt64 b, io SInt64 c[]) {
+  c[index] = a[index] + b;
+}
+function SInt64[] +(SInt64 a[], SInt64 b) {
+  SInt64 c[];
+  c.resize(a.size);
+  // for (Integer i = 0; i < a.size; i++) {
+  //   c[i] = a[i] + b;
+  // }
+  multiPlusSInt64<<<a.size>>>(a,b,c);
+  return c;
+}
+function SInt64[] +(SInt64 b, SInt64 a[]) {
+  SInt64 c[];
+  c.resize(a.size);
+  multiPlusSInt64<<<a.size>>>(a,b,c);
+  return c;
+}
+
+// Float32 a[] + Float32 b | Float32 b + Float32 a[]
+operator multiPlusFloat32<<<index>>>(Float32 a[], Float32 b, io Float32 c[]) {
+  c[index] = a[index] + b;
+}
+function Float32[] +(Float32 a[], Float32 b) {
+  Float32 c[];
+  c.resize(a.size);
+  // for (Integer i = 0; i < a.size; i++) {
+  //   c[i] = a[i] + b;
+  // }
+  multiPlusFloat32<<<a.size>>>(a,b,c);
+  return c;
+}
+function Float32[] +(Float32 b, Float32 a[]) {
+  Float32 c[];
+  c.resize(a.size);
+  multiPlusFloat32<<<a.size>>>(a,b,c);
+  return c;
+}
+
+// Float64 a[] + Float64 b | Float64 b + Float64 a[]
+operator multiPlusFloat64<<<index>>>(Float64 a[], Float64 b, io Float64 c[]) {
+  c[index] = a[index] + b;
+}
+function Float64[] +(Float64 a[], Float64 b) {
+  Float64 c[];
+  c.resize(a.size);
+  // for (Integer i = 0; i < a.size; i++) {
+  //   c[i] = a[i] + b;
+  // }
+  multiPlusFloat64<<<a.size>>>(a,b,c);
+  return c;
+}
+function Float64[] +(Float64 b, Float64 a[]) {
+  Float64 c[];
+  c.resize(a.size);
+  multiPlusFloat64<<<a.size>>>(a,b,c);
+  return c;
+}
+
+// a[] - b | b - a[]
+
+// UInt8 a[] - UInt8 b
+operator multiAMinusBUInt8<<<index>>>(UInt8 a[], UInt8 b, io UInt8 c[]) {
+  c[index] = a[index] - b;
+}
+function UInt8[] -(UInt8 a[], UInt8 b) {
+  UInt8 c[];
+  c.resize(a.size);
+  multiAMinusBUInt8<<<a.size>>>(a,b,c);
+  return c;
+}
+// UInt8 b - UInt8 a[]
+operator multiBMinusAUInt8<<<index>>>(UInt8 a[], UInt8 b, io UInt8 c[]) {
+  c[index] = b - a[index];
+}
+function UInt8[] -(UInt8 b, UInt8 a[]) {
+  UInt8 c[];
+  c.resize(a.size);
+  multiBMinusAUInt8<<<a.size>>>(a,b,c);
+  return c;
+}
+
+// SInt8 a[] - SInt8 b
+operator multiAMinusBSInt8<<<index>>>(SInt8 a[], SInt8 b, io SInt8 c[]) {
+  c[index] = a[index] - b;
+}
+function SInt8[] -(SInt8 a[], SInt8 b) {
+  SInt8 c[];
+  c.resize(a.size);
+  multiAMinusBSInt8<<<a.size>>>(a,b,c);
+  return c;
+}
+// SInt8 b - SInt8 a[]
+operator multiBMinusASInt8<<<index>>>(SInt8 a[], SInt8 b, io SInt8 c[]) {
+  c[index] = b - a[index];
+}
+function SInt8[] -(SInt8 b, SInt8 a[]) {
+  SInt8 c[];
+  c.resize(a.size);
+  multiBMinusASInt8<<<a.size>>>(a,b,c);
+  return c;
+}
+
+// UInt16 a[] - UInt16 b
+operator multiAMinusBUInt16<<<index>>>(UInt16 a[], UInt16 b, io UInt16 c[]) {
+  c[index] = a[index] - b;
+}
+function UInt16[] -(UInt16 a[], UInt16 b) {
+  UInt16 c[];
+  c.resize(a.size);
+  multiAMinusBUInt16<<<a.size>>>(a,b,c);
+  return c;
+}
+// UInt16 b - UInt16 a[]
+operator multiBMinusAUInt16<<<index>>>(UInt16 a[], UInt16 b, io UInt16 c[]) {
+  c[index] = b - a[index];
+}
+function UInt16[] -(UInt16 b, UInt16 a[]) {
+  UInt16 c[];
+  c.resize(a.size);
+  multiBMinusAUInt16<<<a.size>>>(a,b,c);
+  return c;
+}
+
+// SInt16 a[] - SInt16 b
+operator multiAMinusBSInt16<<<index>>>(SInt16 a[], SInt16 b, io SInt16 c[]) {
+  c[index] = a[index] - b;
+}
+function SInt16[] -(SInt16 a[], SInt16 b) {
+  SInt16 c[];
+  c.resize(a.size);
+  multiAMinusBSInt16<<<a.size>>>(a,b,c);
+  return c;
+}
+// SInt16 b - SInt16 a[]
+operator multiBMinusASInt16<<<index>>>(SInt16 a[], SInt16 b, io SInt16 c[]) {
+  c[index] = b - a[index];
+}
+function SInt16[] -(SInt16 b, SInt16 a[]) {
+  SInt16 c[];
+  c.resize(a.size);
+  multiBMinusASInt16<<<a.size>>>(a,b,c);
+  return c;
+}
+
+// UInt32 a[] - UInt32 b
+operator multiAMinusBUInt32<<<index>>>(UInt32 a[], UInt32 b, io UInt32 c[]) {
+  c[index] = a[index] - b;
+}
+function UInt32[] -(UInt32 a[], UInt32 b) {
+  UInt32 c[];
+  c.resize(a.size);
+  multiAMinusBUInt32<<<a.size>>>(a,b,c);
+  return c;
+}
+// UInt32 b - UInt32 a[]
+operator multiBMinusAUInt32<<<index>>>(UInt32 a[], UInt32 b, io UInt32 c[]) {
+  c[index] = b - a[index];
+}
+function UInt32[] -(UInt32 b, UInt32 a[]) {
+  UInt32 c[];
+  c.resize(a.size);
+  multiBMinusAUInt32<<<a.size>>>(a,b,c);
+  return c;
+}
+
+// SInt32 a[] - SInt32 b
+operator multiAMinusBSInt32<<<index>>>(SInt32 a[], SInt32 b, io SInt32 c[]) {
+  c[index] = a[index] - b;
+}
+function SInt32[] -(SInt32 a[], SInt32 b) {
+  SInt32 c[];
+  c.resize(a.size);
+  multiAMinusBSInt32<<<a.size>>>(a,b,c);
+  return c;
+}
+// SInt32 b - SInt32 a[]
+operator multiBMinusASInt32<<<index>>>(SInt32 a[], SInt32 b, io SInt32 c[]) {
+  c[index] = b - a[index];
+}
+function SInt32[] -(SInt32 b, SInt32 a[]) {
+  SInt32 c[];
+  c.resize(a.size);
+  multiBMinusASInt32<<<a.size>>>(a,b,c);
+  return c;
+}
+
+// UInt64 a[] - UInt64 b
+operator multiAMinusBUInt64<<<index>>>(UInt64 a[], UInt64 b, io UInt64 c[]) {
+  c[index] = a[index] - b;
+}
+function UInt64[] -(UInt64 a[], UInt64 b) {
+  UInt64 c[];
+  c.resize(a.size);
+  multiAMinusBUInt64<<<a.size>>>(a,b,c);
+  return c;
+}
+// UInt64 b - UInt64 a[]
+operator multiBMinusAUInt64<<<index>>>(UInt64 a[], UInt64 b, io UInt64 c[]) {
+  c[index] = b - a[index];
+}
+function UInt64[] -(UInt64 b, UInt64 a[]) {
+  UInt64 c[];
+  c.resize(a.size);
+  multiBMinusAUInt64<<<a.size>>>(a,b,c);
+  return c;
+}
+
+// SInt64 a[] - SInt64 b
+operator multiAMinusBSInt64<<<index>>>(SInt64 a[], SInt64 b, io SInt64 c[]) {
+  c[index] = a[index] - b;
+}
+function SInt64[] -(SInt64 a[], SInt64 b) {
+  SInt64 c[];
+  c.resize(a.size);
+  multiAMinusBSInt64<<<a.size>>>(a,b,c);
+  return c;
+}
+// SInt64 b - SInt64 a[]
+operator multiBMinusASInt64<<<index>>>(SInt64 a[], SInt64 b, io SInt64 c[]) {
+  c[index] = b - a[index];
+}
+function SInt64[] -(SInt64 b, SInt64 a[]) {
+  SInt64 c[];
+  c.resize(a.size);
+  multiBMinusASInt64<<<a.size>>>(a,b,c);
+  return c;
+}
+
+// Float32 a[] - Float32 b
+operator multiAMinusBFloat32<<<index>>>(Float32 a[], Float32 b, io Float32 c[]) {
+  c[index] = a[index] - b;
+}
+function Float32[] -(Float32 a[], Float32 b) {
+  Float32 c[];
+  c.resize(a.size);
+  multiAMinusBFloat32<<<a.size>>>(a,b,c);
+  return c;
+}
+// Float32 b - Float32 a[]
+operator multiBMinusAFloat32<<<index>>>(Float32 a[], Float32 b, io Float32 c[]) {
+  c[index] = b - a[index];
+}
+function Float32[] -(Float32 b, Float32 a[]) {
+  Float32 c[];
+  c.resize(a.size);
+  multiBMinusAFloat32<<<a.size>>>(a,b,c);
+  return c;
+}
+
+// Float64 a[] - Float64 b
+operator multiAMinusBFloat64<<<index>>>(Float64 a[], Float64 b, io Float64 c[]) {
+  c[index] = a[index] - b;
+}
+function Float64[] -(Float64 a[], Float64 b) {
+  Float64 c[];
+  c.resize(a.size);
+  multiAMinusBFloat64<<<a.size>>>(a,b,c);
+  return c;
+}
+// Float64 b - Float64 a[]
+operator multiBMinusAFloat64<<<index>>>(Float64 a[], Float64 b, io Float64 c[]) {
+  c[index] = b - a[index];
+}
+function Float64[] -(Float64 b, Float64 a[]) {
+  Float64 c[];
+  c.resize(a.size);
+  multiBMinusAFloat64<<<a.size>>>(a,b,c);
+  return c;
+}
+
+// a[] * b | b * a[]
+
+// UInt8 a[] * UInt8 b | UInt8 b * UInt8 a[]
+operator multiMultiplyUInt8<<<index>>>(UInt8 a[], UInt8 b, io UInt8 c[]) {
+  c[index] = a[index] * b;
+}
+function UInt8[] *(UInt8 a[], UInt8 b) {
+  UInt8 c[];
+  c.resize(a.size);
+  multiMultiplyUInt8<<<a.size>>>(a,b,c);
+  return c;
+}
+function UInt8[] *(UInt8 b, UInt8 a[]) {
+  UInt8 c[];
+  c.resize(a.size);
+  multiMultiplyUInt8<<<a.size>>>(a,b,c);
+  return c;
+}
+
+// SInt8 a[] * SInt8 b | SInt8 b * SInt8 a[]
+operator multiMultiplySInt8<<<index>>>(SInt8 a[], SInt8 b, io SInt8 c[]) {
+  c[index] = a[index] * b;
+}
+function SInt8[] *(SInt8 a[], SInt8 b) {
+  SInt8 c[];
+  c.resize(a.size);
+  multiMultiplySInt8<<<a.size>>>(a,b,c);
+  return c;
+}
+function SInt8[] *(SInt8 b, SInt8 a[]) {
+  SInt8 c[];
+  c.resize(a.size);
+  multiMultiplySInt8<<<a.size>>>(a,b,c);
+  return c;
+}
+
+// UInt16 a[] * UInt16 b | UInt16 b * UInt16 a[]
+operator multiMultiplyUInt16<<<index>>>(UInt16 a[], UInt16 b, io UInt16 c[]) {
+  c[index] = a[index] * b;
+}
+function UInt16[] *(UInt16 a[], UInt16 b) {
+  UInt16 c[];
+  c.resize(a.size);
+  multiMultiplyUInt16<<<a.size>>>(a,b,c);
+  return c;
+}
+function UInt16[] *(UInt16 b, UInt16 a[]) {
+  UInt16 c[];
+  c.resize(a.size);
+  multiMultiplyUInt16<<<a.size>>>(a,b,c);
+  return c;
+}
+
+// SInt16 a[] * SInt16 b | SInt16 b * SInt16 a[]
+operator multiMultiplySInt16<<<index>>>(SInt16 a[], SInt16 b, io SInt16 c[]) {
+  c[index] = a[index] * b;
+}
+function SInt16[] *(SInt16 a[], SInt16 b) {
+  SInt16 c[];
+  c.resize(a.size);
+  multiMultiplySInt16<<<a.size>>>(a,b,c);
+  return c;
+}
+function SInt16[] *(SInt16 b, SInt16 a[]) {
+  SInt16 c[];
+  c.resize(a.size);
+  multiMultiplySInt16<<<a.size>>>(a,b,c);
+  return c;
+}
+
+// UInt32 a[] * UInt32 b | UInt32 b * UInt32 a[]
+operator multiMultiplyUInt32<<<index>>>(UInt32 a[], UInt32 b, io UInt32 c[]) {
+  c[index] = a[index] * b;
+}
+function UInt32[] *(UInt32 a[], UInt32 b) {
+  UInt32 c[];
+  c.resize(a.size);
+  multiMultiplyUInt32<<<a.size>>>(a,b,c);
+  return c;
+}
+function UInt32[] *(UInt32 b, UInt32 a[]) {
+  UInt32 c[];
+  c.resize(a.size);
+  multiMultiplyUInt32<<<a.size>>>(a,b,c);
+  return c;
+}
+
+// SInt32 a[] * SInt32 b | SInt32 b * SInt32 a[]
+operator multiMultiplySInt32<<<index>>>(SInt32 a[], SInt32 b, io SInt32 c[]) {
+  c[index] = a[index] * b;
+}
+function SInt32[] *(SInt32 a[], SInt32 b) {
+  SInt32 c[];
+  c.resize(a.size);
+  multiMultiplySInt32<<<a.size>>>(a,b,c);
+  return c;
+}
+function SInt32[] *(SInt32 b, SInt32 a[]) {
+  SInt32 c[];
+  c.resize(a.size);
+  multiMultiplySInt32<<<a.size>>>(a,b,c);
+  return c;
+}
+
+// UInt64 a[] * UInt64 b | UInt64 b * UInt64 a[]
+operator multiMultiplyUInt64<<<index>>>(UInt64 a[], UInt64 b, io UInt64 c[]) {
+  c[index] = a[index] * b;
+}
+function UInt64[] *(UInt64 a[], UInt64 b) {
+  UInt64 c[];
+  c.resize(a.size);
+  multiMultiplyUInt64<<<a.size>>>(a,b,c);
+  return c;
+}
+function UInt64[] *(UInt64 b, UInt64 a[]) {
+  UInt64 c[];
+  c.resize(a.size);
+  multiMultiplyUInt64<<<a.size>>>(a,b,c);
+  return c;
+}
+
+// SInt64 a[] * SInt64 b | SInt64 b * SInt64 a[]
+operator multiMultiplySInt64<<<index>>>(SInt64 a[], SInt64 b, io SInt64 c[]) {
+  c[index] = a[index] * b;
+}
+function SInt64[] *(SInt64 a[], SInt64 b) {
+  SInt64 c[];
+  c.resize(a.size);
+  multiMultiplySInt64<<<a.size>>>(a,b,c);
+  return c;
+}
+function SInt64[] *(SInt64 b, SInt64 a[]) {
+  SInt64 c[];
+  c.resize(a.size);
+  multiMultiplySInt64<<<a.size>>>(a,b,c);
+  return c;
+}
+
+// Float32 a[] * Float32 b | Float32 b * Float32 a[]
+operator multiMultiplyFloat32<<<index>>>(Float32 a[], Float32 b, io Float32 c[]) {
+  c[index] = a[index] * b;
+}
+function Float32[] *(Float32 a[], Float32 b) {
+  Float32 c[];
+  c.resize(a.size);
+  multiMultiplyFloat32<<<a.size>>>(a,b,c);
+  return c;
+}
+function Float32[] *(Float32 b, Float32 a[]) {
+  Float32 c[];
+  c.resize(a.size);
+  multiMultiplyFloat32<<<a.size>>>(a,b,c);
+  return c;
+}
+
+// Float64 a[] * Float64 b | Float64 b * Float64 a[]
+operator multiMultiplyFloat64<<<index>>>(Float64 a[], Float64 b, io Float64 c[]) {
+  c[index] = a[index] * b;
+}
+function Float64[] *(Float64 a[], Float64 b) {
+  Float64 c[];
+  c.resize(a.size);
+  multiMultiplyFloat64<<<a.size>>>(a,b,c);
+  return c;
+}
+function Float64[] *(Float64 b, Float64 a[]) {
+  Float64 c[];
+  c.resize(a.size);
+  multiMultiplyFloat64<<<a.size>>>(a,b,c);
+  return c;
+}
+
+// a[] / b | b / a[]
+
+// UInt8 a[] / UInt8 b
+operator multiADivideBUInt8<<<index>>>(UInt8 a[], UInt8 b, io UInt8 c[]) {
+  c[index] = a[index] / b;
+}
+function UInt8[] /(UInt8 a[], UInt8 b) {
+  UInt8 c[];
+  c.resize(a.size);
+  multiADivideBUInt8<<<a.size>>>(a,b,c);
+  return c;
+}
+// UInt8 b / UInt8 a[]
+operator multiBDivideAUInt8<<<index>>>(UInt8 a[], UInt8 b, io UInt8 c[]) {
+  c[index] = b / a[index];
+}
+function UInt8[] /(UInt8 b, UInt8 a[]) {
+  UInt8 c[];
+  c.resize(a.size);
+  multiBDivideAUInt8<<<a.size>>>(a,b,c);
+  return c;
+}
+
+// SInt8 a[] / SInt8 b
+operator multiADivideBSInt8<<<index>>>(SInt8 a[], SInt8 b, io SInt8 c[]) {
+  c[index] = a[index] / b;
+}
+function SInt8[] /(SInt8 a[], SInt8 b) {
+  SInt8 c[];
+  c.resize(a.size);
+  multiADivideBSInt8<<<a.size>>>(a,b,c);
+  return c;
+}
+// SInt8 b / SInt8 a[]
+operator multiBDivideASInt8<<<index>>>(SInt8 a[], SInt8 b, io SInt8 c[]) {
+  c[index] = b / a[index];
+}
+function SInt8[] /(SInt8 b, SInt8 a[]) {
+  SInt8 c[];
+  c.resize(a.size);
+  multiBDivideASInt8<<<a.size>>>(a,b,c);
+  return c;
+}
+
+// UInt16 a[] / UInt16 b
+operator multiADivideBUInt16<<<index>>>(UInt16 a[], UInt16 b, io UInt16 c[]) {
+  c[index] = a[index] / b;
+}
+function UInt16[] /(UInt16 a[], UInt16 b) {
+  UInt16 c[];
+  c.resize(a.size);
+  multiADivideBUInt16<<<a.size>>>(a,b,c);
+  return c;
+}
+// UInt16 b / UInt16 a[]
+operator multiBDivideAUInt16<<<index>>>(UInt16 a[], UInt16 b, io UInt16 c[]) {
+  c[index] = b / a[index];
+}
+function UInt16[] /(UInt16 b, UInt16 a[]) {
+  UInt16 c[];
+  c.resize(a.size);
+  multiBDivideAUInt16<<<a.size>>>(a,b,c);
+  return c;
+}
+
+// SInt16 a[] / SInt16 b
+operator multiADivideBSInt16<<<index>>>(SInt16 a[], SInt16 b, io SInt16 c[]) {
+  c[index] = a[index] / b;
+}
+function SInt16[] /(SInt16 a[], SInt16 b) {
+  SInt16 c[];
+  c.resize(a.size);
+  multiADivideBSInt16<<<a.size>>>(a,b,c);
+  return c;
+}
+// SInt16 b / SInt16 a[]
+operator multiBDivideASInt16<<<index>>>(SInt16 a[], SInt16 b, io SInt16 c[]) {
+  c[index] = b / a[index];
+}
+function SInt16[] /(SInt16 b, SInt16 a[]) {
+  SInt16 c[];
+  c.resize(a.size);
+  multiBDivideASInt16<<<a.size>>>(a,b,c);
+  return c;
+}
+
+// UInt32 a[] / UInt32 b
+operator multiADivideBUInt32<<<index>>>(UInt32 a[], UInt32 b, io UInt32 c[]) {
+  c[index] = a[index] / b;
+}
+function UInt32[] /(UInt32 a[], UInt32 b) {
+  UInt32 c[];
+  c.resize(a.size);
+  multiADivideBUInt32<<<a.size>>>(a,b,c);
+  return c;
+}
+// UInt32 b / UInt32 a[]
+operator multiBDivideAUInt32<<<index>>>(UInt32 a[], UInt32 b, io UInt32 c[]) {
+  c[index] = b / a[index];
+}
+function UInt32[] /(UInt32 b, UInt32 a[]) {
+  UInt32 c[];
+  c.resize(a.size);
+  multiBDivideAUInt32<<<a.size>>>(a,b,c);
+  return c;
+}
+
+// SInt32 a[] / SInt32 b
+operator multiADivideBSInt32<<<index>>>(SInt32 a[], SInt32 b, io SInt32 c[]) {
+  c[index] = a[index] / b;
+}
+function SInt32[] /(SInt32 a[], SInt32 b) {
+  SInt32 c[];
+  c.resize(a.size);
+  multiADivideBSInt32<<<a.size>>>(a,b,c);
+  return c;
+}
+// SInt32 b / SInt32 a[]
+operator multiBDivideASInt32<<<index>>>(SInt32 a[], SInt32 b, io SInt32 c[]) {
+  c[index] = b / a[index];
+}
+function SInt32[] /(SInt32 b, SInt32 a[]) {
+  SInt32 c[];
+  c.resize(a.size);
+  multiBDivideASInt32<<<a.size>>>(a,b,c);
+  return c;
+}
+
+// UInt64 a[] / UInt64 b
+operator multiADivideBUInt64<<<index>>>(UInt64 a[], UInt64 b, io UInt64 c[]) {
+  c[index] = a[index] / b;
+}
+function UInt64[] /(UInt64 a[], UInt64 b) {
+  UInt64 c[];
+  c.resize(a.size);
+  multiADivideBUInt64<<<a.size>>>(a,b,c);
+  return c;
+}
+// UInt64 b / UInt64 a[]
+operator multiBDivideAUInt64<<<index>>>(UInt64 a[], UInt64 b, io UInt64 c[]) {
+  c[index] = b / a[index];
+}
+function UInt64[] /(UInt64 b, UInt64 a[]) {
+  UInt64 c[];
+  c.resize(a.size);
+  multiBDivideAUInt64<<<a.size>>>(a,b,c);
+  return c;
+}
+
+// SInt64 a[] / SInt64 b
+operator multiADivideBSInt64<<<index>>>(SInt64 a[], SInt64 b, io SInt64 c[]) {
+  c[index] = a[index] / b;
+}
+function SInt64[] /(SInt64 a[], SInt64 b) {
+  SInt64 c[];
+  c.resize(a.size);
+  multiADivideBSInt64<<<a.size>>>(a,b,c);
+  return c;
+}
+// SInt64 b / SInt64 a[]
+operator multiBDivideASInt64<<<index>>>(SInt64 a[], SInt64 b, io SInt64 c[]) {
+  c[index] = b / a[index];
+}
+function SInt64[] /(SInt64 b, SInt64 a[]) {
+  SInt64 c[];
+  c.resize(a.size);
+  multiBDivideASInt64<<<a.size>>>(a,b,c);
+  return c;
+}
+
+// Float32 a[] / Float32 b
+operator multiADivideBFloat32<<<index>>>(Float32 a[], Float32 b, io Float32 c[]) {
+  c[index] = a[index] / b;
+}
+function Float32[] /(Float32 a[], Float32 b) {
+  Float32 c[];
+  c.resize(a.size);
+  multiADivideBFloat32<<<a.size>>>(a,b,c);
+  return c;
+}
+// Float32 b / Float32 a[]
+operator multiBDivideAFloat32<<<index>>>(Float32 a[], Float32 b, io Float32 c[]) {
+  c[index] = b / a[index];
+}
+function Float32[] /(Float32 b, Float32 a[]) {
+  Float32 c[];
+  c.resize(a.size);
+  multiBDivideAFloat32<<<a.size>>>(a,b,c);
+  return c;
+}
+
+// Float64 a[] / Float64 b
+operator multiADivideBFloat64<<<index>>>(Float64 a[], Float64 b, io Float64 c[]) {
+  c[index] = a[index] / b;
+}
+function Float64[] /(Float64 a[], Float64 b) {
+  Float64 c[];
+  c.resize(a.size);
+  multiADivideBFloat64<<<a.size>>>(a,b,c);
+  return c;
+}
+// Float64 b / Float64 a[]
+operator multiBDivideAFloat64<<<index>>>(Float64 a[], Float64 b, io Float64 c[]) {
+  c[index] = b / a[index];
+}
+function Float64[] /(Float64 b, Float64 a[]) {
+  Float64 c[];
+  c.resize(a.size);
+  multiBDivideAFloat64<<<a.size>>>(a,b,c);
+  return c;
+}
+
+// a[] % b | b % a[]
+
+// UInt8 a[] % UInt8 b
+operator multiAModBUInt8<<<index>>>(UInt8 a[], UInt8 b, io UInt8 c[]) {
+  c[index] = a[index] % b;
+}
+function UInt8[] %(UInt8 a[], UInt8 b) {
+  UInt8 c[];
+  c.resize(a.size);
+  multiAModBUInt8<<<a.size>>>(a,b,c);
+  return c;
+}
+// UInt8 b % UInt8 a[]
+operator multiBModAUInt8<<<index>>>(UInt8 a[], UInt8 b, io UInt8 c[]) {
+  c[index] = b % a[index];
+}
+function UInt8[] %(UInt8 b, UInt8 a[]) {
+  UInt8 c[];
+  c.resize(a.size);
+  multiBModAUInt8<<<a.size>>>(a,b,c);
+  return c;
+}
+
+// SInt8 a[] % SInt8 b
+operator multiAModBSInt8<<<index>>>(SInt8 a[], SInt8 b, io SInt8 c[]) {
+  c[index] = a[index] % b;
+}
+function SInt8[] %(SInt8 a[], SInt8 b) {
+  SInt8 c[];
+  c.resize(a.size);
+  multiAModBSInt8<<<a.size>>>(a,b,c);
+  return c;
+}
+// SInt8 b % SInt8 a[]
+operator multiBModASInt8<<<index>>>(SInt8 a[], SInt8 b, io SInt8 c[]) {
+  c[index] = b % a[index];
+}
+function SInt8[] %(SInt8 b, SInt8 a[]) {
+  SInt8 c[];
+  c.resize(a.size);
+  multiBModASInt8<<<a.size>>>(a,b,c);
+  return c;
+}
+
+// UInt16 a[] % UInt16 b
+operator multiAModBUInt16<<<index>>>(UInt16 a[], UInt16 b, io UInt16 c[]) {
+  c[index] = a[index] % b;
+}
+function UInt16[] %(UInt16 a[], UInt16 b) {
+  UInt16 c[];
+  c.resize(a.size);
+  multiAModBUInt16<<<a.size>>>(a,b,c);
+  return c;
+}
+// UInt16 b % UInt16 a[]
+operator multiBModAUInt16<<<index>>>(UInt16 a[], UInt16 b, io UInt16 c[]) {
+  c[index] = b % a[index];
+}
+function UInt16[] %(UInt16 b, UInt16 a[]) {
+  UInt16 c[];
+  c.resize(a.size);
+  multiBModAUInt16<<<a.size>>>(a,b,c);
+  return c;
+}
+
+// SInt16 a[] % SInt16 b
+operator multiAModBSInt16<<<index>>>(SInt16 a[], SInt16 b, io SInt16 c[]) {
+  c[index] = a[index] % b;
+}
+function SInt16[] %(SInt16 a[], SInt16 b) {
+  SInt16 c[];
+  c.resize(a.size);
+  multiAModBSInt16<<<a.size>>>(a,b,c);
+  return c;
+}
+// SInt16 b % SInt16 a[]
+operator multiBModASInt16<<<index>>>(SInt16 a[], SInt16 b, io SInt16 c[]) {
+  c[index] = b % a[index];
+}
+function SInt16[] %(SInt16 b, SInt16 a[]) {
+  SInt16 c[];
+  c.resize(a.size);
+  multiBModASInt16<<<a.size>>>(a,b,c);
+  return c;
+}
+
+// UInt32 a[] % UInt32 b
+operator multiAModBUInt32<<<index>>>(UInt32 a[], UInt32 b, io UInt32 c[]) {
+  c[index] = a[index] % b;
+}
+function UInt32[] %(UInt32 a[], UInt32 b) {
+  UInt32 c[];
+  c.resize(a.size);
+  multiAModBUInt32<<<a.size>>>(a,b,c);
+  return c;
+}
+// UInt32 b % UInt32 a[]
+operator multiBModAUInt32<<<index>>>(UInt32 a[], UInt32 b, io UInt32 c[]) {
+  c[index] = b % a[index];
+}
+function UInt32[] %(UInt32 b, UInt32 a[]) {
+  UInt32 c[];
+  c.resize(a.size);
+  multiBModAUInt32<<<a.size>>>(a,b,c);
+  return c;
+}
+
+// SInt32 a[] % SInt32 b
+operator multiAModBSInt32<<<index>>>(SInt32 a[], SInt32 b, io SInt32 c[]) {
+  c[index] = a[index] % b;
+}
+function SInt32[] %(SInt32 a[], SInt32 b) {
+  SInt32 c[];
+  c.resize(a.size);
+  multiAModBSInt32<<<a.size>>>(a,b,c);
+  return c;
+}
+// SInt32 b % SInt32 a[]
+operator multiBModASInt32<<<index>>>(SInt32 a[], SInt32 b, io SInt32 c[]) {
+  c[index] = b % a[index];
+}
+function SInt32[] %(SInt32 b, SInt32 a[]) {
+  SInt32 c[];
+  c.resize(a.size);
+  multiBModASInt32<<<a.size>>>(a,b,c);
+  return c;
+}
+
+// UInt64 a[] % UInt64 b
+operator multiAModBUInt64<<<index>>>(UInt64 a[], UInt64 b, io UInt64 c[]) {
+  c[index] = a[index] % b;
+}
+function UInt64[] %(UInt64 a[], UInt64 b) {
+  UInt64 c[];
+  c.resize(a.size);
+  multiAModBUInt64<<<a.size>>>(a,b,c);
+  return c;
+}
+// UInt64 b % UInt64 a[]
+operator multiBModAUInt64<<<index>>>(UInt64 a[], UInt64 b, io UInt64 c[]) {
+  c[index] = b % a[index];
+}
+function UInt64[] %(UInt64 b, UInt64 a[]) {
+  UInt64 c[];
+  c.resize(a.size);
+  multiBModAUInt64<<<a.size>>>(a,b,c);
+  return c;
+}
+
+// SInt64 a[] % SInt64 b
+operator multiAModBSInt64<<<index>>>(SInt64 a[], SInt64 b, io SInt64 c[]) {
+  c[index] = a[index] % b;
+}
+function SInt64[] %(SInt64 a[], SInt64 b) {
+  SInt64 c[];
+  c.resize(a.size);
+  multiAModBSInt64<<<a.size>>>(a,b,c);
+  return c;
+}
+// SInt64 b % SInt64 a[]
+operator multiBModASInt64<<<index>>>(SInt64 a[], SInt64 b, io SInt64 c[]) {
+  c[index] = b % a[index];
+}
+function SInt64[] %(SInt64 b, SInt64 a[]) {
+  SInt64 c[];
+  c.resize(a.size);
+  multiBModASInt64<<<a.size>>>(a,b,c);
+  return c;
+}
+
+// Float32 a[] % Float32 b
+operator multiAModBFloat32<<<index>>>(Float32 a[], Float32 b, io Float32 c[]) {
+  c[index] = a[index] % b;
+}
+function Float32[] %(Float32 a[], Float32 b) {
+  Float32 c[];
+  c.resize(a.size);
+  multiAModBFloat32<<<a.size>>>(a,b,c);
+  return c;
+}
+// Float32 b % Float32 a[]
+operator multiBModAFloat32<<<index>>>(Float32 a[], Float32 b, io Float32 c[]) {
+  c[index] = b % a[index];
+}
+function Float32[] %(Float32 b, Float32 a[]) {
+  Float32 c[];
+  c.resize(a.size);
+  multiBModAFloat32<<<a.size>>>(a,b,c);
+  return c;
+}
+
+// Float64 a[] % Float64 b
+operator multiAModBFloat64<<<index>>>(Float64 a[], Float64 b, io Float64 c[]) {
+  c[index] = a[index] % b;
+}
+function Float64[] %(Float64 a[], Float64 b) {
+  Float64 c[];
+  c.resize(a.size);
+  multiAModBFloat64<<<a.size>>>(a,b,c);
+  return c;
+}
+// Float64 b % Float64 a[]
+operator multiBModAFloat64<<<index>>>(Float64 a[], Float64 b, io Float64 c[]) {
+  c[index] = b % a[index];
+}
+function Float64[] %(Float64 b, Float64 a[]) {
+  Float64 c[];
+  c.resize(a.size);
+  multiBModAFloat64<<<a.size>>>(a,b,c);
+  return c;
+}
+

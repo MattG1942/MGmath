@@ -27,7 +27,7 @@
 
 # <T>
 // <T> a[] + <T> b | <T> b + <T> a[]
-operator multiPlus<<<index>>>(<T> a[], <T> b, io <T> c[]) {
+operator multiPlus<T><<<index>>>(<T> a[], <T> b, io <T> c[]) {
   c[index] = a[index] + b;
 }
 function <T>[] +(<T> a[], <T> b) {
@@ -36,13 +36,13 @@ function <T>[] +(<T> a[], <T> b) {
   // for (Integer i = 0; i < a.size; i++) {
   //   c[i] = a[i] + b;
   // }
-  multiPlus<<<a.size>>>(a,b,c);
+  multiPlus<T><<<a.size>>>(a,b,c);
   return c;
 }
 function <T>[] +(<T> b, <T> a[]) {
   <T> c[];
   c.resize(a.size);
-  multiPlus<<<a.size>>>(a,b,c);
+  multiPlus<T><<<a.size>>>(a,b,c);
   return c;
 }
 
@@ -51,23 +51,23 @@ function <T>[] +(<T> b, <T> a[]) {
 
 # <T>
 // <T> a[] - <T> b
-operator multiAMinusB<<<index>>>(<T> a[], <T> b, io <T> c[]) {
+operator multiAMinusB<T><<<index>>>(<T> a[], <T> b, io <T> c[]) {
   c[index] = a[index] - b;
 }
 function <T>[] -(<T> a[], <T> b) {
   <T> c[];
   c.resize(a.size);
-  multiAMinusB<<<a.size>>>(a,b,c);
+  multiAMinusB<T><<<a.size>>>(a,b,c);
   return c;
 }
 // <T> b - <T> a[]
-operator multiBMinusA<<<index>>>(<T> a[], <T> b, io <T> c[]) {
+operator multiBMinusA<T><<<index>>>(<T> a[], <T> b, io <T> c[]) {
   c[index] = b - a[index];
 }
 function <T>[] -(<T> b, <T> a[]) {
   <T> c[];
   c.resize(a.size);
-  multiBMinusA<<<a.size>>>(a,b,c);
+  multiBMinusA<T><<<a.size>>>(a,b,c);
   return c;
 }
 
@@ -76,19 +76,19 @@ function <T>[] -(<T> b, <T> a[]) {
 
 # <T>
 // <T> a[] * <T> b | <T> b * <T> a[]
-operator multiMultiply<<<index>>>(<T> a[], <T> b, io <T> c[]) {
+operator multiMultiply<T><<<index>>>(<T> a[], <T> b, io <T> c[]) {
   c[index] = a[index] * b;
 }
 function <T>[] *(<T> a[], <T> b) {
   <T> c[];
   c.resize(a.size);
-  multiMultiply<<<a.size>>>(a,b,c);
+  multiMultiply<T><<<a.size>>>(a,b,c);
   return c;
 }
 function <T>[] *(<T> b, <T> a[]) {
   <T> c[];
   c.resize(a.size);
-  multiMultiply<<<a.size>>>(a,b,c);
+  multiMultiply<T><<<a.size>>>(a,b,c);
   return c;
 }
 
@@ -97,23 +97,23 @@ function <T>[] *(<T> b, <T> a[]) {
 
 # <T>
 // <T> a[] / <T> b
-operator multiADivideB<<<index>>>(<T> a[], <T> b, io <T> c[]) {
+operator multiADivideB<T><<<index>>>(<T> a[], <T> b, io <T> c[]) {
   c[index] = a[index] / b;
 }
 function <T>[] /(<T> a[], <T> b) {
   <T> c[];
   c.resize(a.size);
-  multiADivideB<<<a.size>>>(a,b,c);
+  multiADivideB<T><<<a.size>>>(a,b,c);
   return c;
 }
 // <T> b / <T> a[]
-operator multiBDivideA<<<index>>>(<T> a[], <T> b, io <T> c[]) {
+operator multiBDivideA<T><<<index>>>(<T> a[], <T> b, io <T> c[]) {
   c[index] = b / a[index];
 }
 function <T>[] /(<T> b, <T> a[]) {
   <T> c[];
   c.resize(a.size);
-  multiBDivideA<<<a.size>>>(a,b,c);
+  multiBDivideA<T><<<a.size>>>(a,b,c);
   return c;
 }
 
@@ -122,23 +122,23 @@ function <T>[] /(<T> b, <T> a[]) {
 
 # <T>
 // <T> a[] % <T> b
-operator multiAModB<<<index>>>(<T> a[], <T> b, io <T> c[]) {
+operator multiAModB<T><<<index>>>(<T> a[], <T> b, io <T> c[]) {
   c[index] = a[index] % b;
 }
 function <T>[] %(<T> a[], <T> b) {
   <T> c[];
   c.resize(a.size);
-  multiAModB<<<a.size>>>(a,b,c);
+  multiAModB<T><<<a.size>>>(a,b,c);
   return c;
 }
 // <T> b % <T> a[]
-operator multiBModA<<<index>>>(<T> a[], <T> b, io <T> c[]) {
+operator multiBModA<T><<<index>>>(<T> a[], <T> b, io <T> c[]) {
   c[index] = b % a[index];
 }
 function <T>[] %(<T> b, <T> a[]) {
   <T> c[];
   c.resize(a.size);
-  multiBModA<<<a.size>>>(a,b,c);
+  multiBModA<T><<<a.size>>>(a,b,c);
   return c;
 }
 

@@ -1,0 +1,159 @@
+// Linear interpolation. 
+// Linear interpolate and Linearly interpolated arrays
+
+// eg. variable = linearInterpolate(first, second, blend)
+// where first and second are the limits. blend is the amount between the limits of the returned value. blend = 0 will return == first, blend = 1 will return == second. blend < 0 or blend > 1 will return a value beyond the limits.
+// All integer types use Float32 blend
+// Float types use matching Float type for blend
+
+// eg. array = linearlyInterpolatedArray(size, start, end)
+// where size is an Integer and start and end are the limits
+
+// All Numerical Base types Suported
+// Future developement:
+// Vector types to be added
+
+//Linear interpolate: 
+
+function Float32 linearInterpolate(in Float32 first, in Float32 second, in Float32 blend) {
+  return (1 - blend) * first + blend * second;
+}
+
+function Float64 linearInterpolate(in Float64 first, in Float64 second, in Float64 blend) {
+  return (1 - blend) * first + blend * second;
+}
+
+function UInt8 linearInterpolate(in UInt8 first, in UInt8 second, in Float32 blend) {
+  return (1 - blend) * first + blend * second;
+}
+
+function SInt8 linearInterpolate(in SInt8 first, in SInt8 second, in Float32 blend) {
+  return (1 - blend) * first + blend * second;
+}
+
+function UInt16 linearInterpolate(in UInt16 first, in UInt16 second, in Float32 blend) {
+  return (1 - blend) * first + blend * second;
+}
+
+function SInt16 linearInterpolate(in SInt16 first, in SInt16 second, in Float32 blend) {
+  return (1 - blend) * first + blend * second;
+}
+
+function UInt32 linearInterpolate(in UInt32 first, in UInt32 second, in Float32 blend) {
+  return (1 - blend) * first + blend * second;
+}
+
+function SInt32 linearInterpolate(in SInt32 first, in SInt32 second, in Float32 blend) {
+  return (1 - blend) * first + blend * second;
+}
+
+function UInt64 linearInterpolate(in UInt64 first, in UInt64 second, in Float32 blend) {
+  return (1 - blend) * first + blend * second;
+}
+
+function SInt64 linearInterpolate(in SInt64 first, in SInt64 second, in Float32 blend) {
+  return (1 - blend) * first + blend * second;
+}
+
+// build Linearly interpolated arrays:
+
+operator linearlyInterpolatedArrayInnerFloat32<<<index>>>(in Integer size, in Float32 start, in Float32 end, io Float32 returnArray[]) {
+  returnArray[index] = linearInterpolate(start, end, Float32(index) / (Float32(size) - 1));
+}
+function Float32[] linearlyInterpolatedArray(in Integer size, in Float32 start, in Float32 end) {
+  Float32 returnArray[];
+  returnArray.resize(size);
+  linearlyInterpolatedArrayInnerFloat32<<<size>>>(size, start, end, returnArray);
+  return returnArray;
+}
+
+operator linearlyInterpolatedArrayInnerFloat64<<<index>>>(in Integer size, in Float64 start, in Float64 end, io Float64 returnArray[]) {
+  returnArray[index] = linearInterpolate(start, end, Float64(index) / (Float64(size) - 1));
+}
+function Float64[] linearlyInterpolatedArray(in Integer size, in Float64 start, in Float64 end) {
+  Float64 returnArray[];
+  returnArray.resize(size);
+  linearlyInterpolatedArrayInnerFloat64<<<size>>>(size, start, end, returnArray);
+  return returnArray;
+}
+
+operator linearlyInterpolatedArrayInnerUInt8<<<index>>>(in Integer size, in UInt8 start, in UInt8 end, io UInt8 returnArray[]) {
+  returnArray[index] = linearInterpolate(start, end, Float32(index) / (Float32(size) - 1));
+}
+function UInt8[] linearlyInterpolatedArray(in Integer size, in UInt8 start, in UInt8 end) {
+  UInt8 returnArray[];
+  returnArray.resize(size);
+  linearlyInterpolatedArrayInnerUInt8<<<size>>>(size, start, end, returnArray);
+  return returnArray;
+}
+
+operator linearlyInterpolatedArrayInnerSInt8<<<index>>>(in Integer size, in SInt8 start, in SInt8 end, io SInt8 returnArray[]) {
+  returnArray[index] = linearInterpolate(start, end, Float32(index) / (Float32(size) - 1));
+}
+function SInt8[] linearlyInterpolatedArray(in Integer size, in SInt8 start, in SInt8 end) {
+  SInt8 returnArray[];
+  returnArray.resize(size);
+  linearlyInterpolatedArrayInnerSInt8<<<size>>>(size, start, end, returnArray);
+  return returnArray;
+}
+
+operator linearlyInterpolatedArrayInnerUInt16<<<index>>>(in Integer size, in UInt16 start, in UInt16 end, io UInt16 returnArray[]) {
+  returnArray[index] = linearInterpolate(start, end, Float32(index) / (Float32(size) - 1));
+}
+function UInt16[] linearlyInterpolatedArray(in Integer size, in UInt16 start, in UInt16 end) {
+  UInt16 returnArray[];
+  returnArray.resize(size);
+  linearlyInterpolatedArrayInnerUInt16<<<size>>>(size, start, end, returnArray);
+  return returnArray;
+}
+
+operator linearlyInterpolatedArrayInnerSInt16<<<index>>>(in Integer size, in SInt16 start, in SInt16 end, io SInt16 returnArray[]) {
+  returnArray[index] = linearInterpolate(start, end, Float32(index) / (Float32(size) - 1));
+}
+function SInt16[] linearlyInterpolatedArray(in Integer size, in SInt16 start, in SInt16 end) {
+  SInt16 returnArray[];
+  returnArray.resize(size);
+  linearlyInterpolatedArrayInnerSInt16<<<size>>>(size, start, end, returnArray);
+  return returnArray;
+}
+
+operator linearlyInterpolatedArrayInnerUInt32<<<index>>>(in Integer size, in UInt32 start, in UInt32 end, io UInt32 returnArray[]) {
+  returnArray[index] = linearInterpolate(start, end, Float32(index) / (Float32(size) - 1));
+}
+function UInt32[] linearlyInterpolatedArray(in Integer size, in UInt32 start, in UInt32 end) {
+  UInt32 returnArray[];
+  returnArray.resize(size);
+  linearlyInterpolatedArrayInnerUInt32<<<size>>>(size, start, end, returnArray);
+  return returnArray;
+}
+
+operator linearlyInterpolatedArrayInnerSInt32<<<index>>>(in Integer size, in SInt32 start, in SInt32 end, io SInt32 returnArray[]) {
+  returnArray[index] = linearInterpolate(start, end, Float32(index) / (Float32(size) - 1));
+}
+function SInt32[] linearlyInterpolatedArray(in Integer size, in SInt32 start, in SInt32 end) {
+  SInt32 returnArray[];
+  returnArray.resize(size);
+  linearlyInterpolatedArrayInnerSInt32<<<size>>>(size, start, end, returnArray);
+  return returnArray;
+}
+
+operator linearlyInterpolatedArrayInnerUInt64<<<index>>>(in Integer size, in UInt64 start, in UInt64 end, io UInt64 returnArray[]) {
+  returnArray[index] = linearInterpolate(start, end, Float32(index) / (Float32(size) - 1));
+}
+function UInt64[] linearlyInterpolatedArray(in Integer size, in UInt64 start, in UInt64 end) {
+  UInt64 returnArray[];
+  returnArray.resize(size);
+  linearlyInterpolatedArrayInnerUInt64<<<size>>>(size, start, end, returnArray);
+  return returnArray;
+}
+
+operator linearlyInterpolatedArrayInnerSInt64<<<index>>>(in Integer size, in SInt64 start, in SInt64 end, io SInt64 returnArray[]) {
+  returnArray[index] = linearInterpolate(start, end, Float32(index) / (Float32(size) - 1));
+}
+function SInt64[] linearlyInterpolatedArray(in Integer size, in SInt64 start, in SInt64 end) {
+  SInt64 returnArray[];
+  returnArray.resize(size);
+  linearlyInterpolatedArrayInnerSInt64<<<size>>>(size, start, end, returnArray);
+  return returnArray;
+}
+
