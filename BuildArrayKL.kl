@@ -1,0 +1,109 @@
+// Build Array From Constant. 
+// Linear interpolate and Linearly interpolated arrays
+
+// returns an array where filled with the specified value
+
+// All Numerical Base types Suported
+// Future developement:
+// Vector types to be added
+
+operator fillArrayUInt8<<<index>>>(UInt8 a, io UInt8 returnArray[]) {
+  returnArray[index] = a;
+}
+function UInt8[] buildArrayFromConstant(Integer size, UInt8 value) {
+  UInt8 returnArray[];
+  returnArray.resize(size);
+  fillArrayUInt8<<<size>>>(value, returnArray);
+  return returnArray;
+}
+
+operator fillArraySInt8<<<index>>>(SInt8 a, io SInt8 returnArray[]) {
+  returnArray[index] = a;
+}
+function SInt8[] buildArrayFromConstant(Integer size, SInt8 value) {
+  SInt8 returnArray[];
+  returnArray.resize(size);
+  fillArraySInt8<<<size>>>(value, returnArray);
+  return returnArray;
+}
+
+operator fillArrayUInt16<<<index>>>(UInt16 a, io UInt16 returnArray[]) {
+  returnArray[index] = a;
+}
+function UInt16[] buildArrayFromConstant(Integer size, UInt16 value) {
+  UInt16 returnArray[];
+  returnArray.resize(size);
+  fillArrayUInt16<<<size>>>(value, returnArray);
+  return returnArray;
+}
+
+operator fillArraySInt16<<<index>>>(SInt16 a, io SInt16 returnArray[]) {
+  returnArray[index] = a;
+}
+function SInt16[] buildArrayFromConstant(Integer size, SInt16 value) {
+  SInt16 returnArray[];
+  returnArray.resize(size);
+  fillArraySInt16<<<size>>>(value, returnArray);
+  return returnArray;
+}
+
+operator fillArrayUInt32<<<index>>>(UInt32 a, io UInt32 returnArray[]) {
+  returnArray[index] = a;
+}
+function UInt32[] buildArrayFromConstant(Integer size, UInt32 value) {
+  UInt32 returnArray[];
+  returnArray.resize(size);
+  fillArrayUInt32<<<size>>>(value, returnArray);
+  return returnArray;
+}
+
+operator fillArraySInt32<<<index>>>(SInt32 a, io SInt32 returnArray[]) {
+  returnArray[index] = a;
+}
+function SInt32[] buildArrayFromConstant(Integer size, SInt32 value) {
+  SInt32 returnArray[];
+  returnArray.resize(size);
+  fillArraySInt32<<<size>>>(value, returnArray);
+  return returnArray;
+}
+
+operator fillArrayUInt64<<<index>>>(UInt64 a, io UInt64 returnArray[]) {
+  returnArray[index] = a;
+}
+function UInt64[] buildArrayFromConstant(Integer size, UInt64 value) {
+  UInt64 returnArray[];
+  returnArray.resize(size);
+  fillArrayUInt64<<<size>>>(value, returnArray);
+  return returnArray;
+}
+
+operator fillArraySInt64<<<index>>>(SInt64 a, io SInt64 returnArray[]) {
+  returnArray[index] = a;
+}
+function SInt64[] buildArrayFromConstant(Integer size, SInt64 value) {
+  SInt64 returnArray[];
+  returnArray.resize(size);
+  fillArraySInt64<<<size>>>(value, returnArray);
+  return returnArray;
+}
+
+operator fillArrayFloat32<<<index>>>(Float32 a, io Float32 returnArray[]) {
+  returnArray[index] = a;
+}
+function Float32[] buildArrayFromConstant(Integer size, Float32 value) {
+  Float32 returnArray[];
+  returnArray.resize(size);
+  fillArrayFloat32<<<size>>>(value, returnArray);
+  return returnArray;
+}
+
+operator fillArrayFloat64<<<index>>>(Float64 a, io Float64 returnArray[]) {
+  returnArray[index] = a;
+}
+function Float64[] buildArrayFromConstant(Integer size, Float64 value) {
+  Float64 returnArray[];
+  returnArray.resize(size);
+  fillArrayFloat64<<<size>>>(value, returnArray);
+  return returnArray;
+}
+

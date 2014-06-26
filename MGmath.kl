@@ -3,3 +3,15 @@
 
 // This kl file proivides general functions.
 
+// build array tools
+
+// Trig functions
+
+
+operator multiSin<<<index>>>(Float32 a[],io Float32 returnArray[]) {
+  returnArray[index] = sin(a[index]);
+}
+
+operator multiCos<<<index>>>(Float32 a[],io Float32 returnArray[]) {
+  returnArray[index] = cos(a[index]);
+}
